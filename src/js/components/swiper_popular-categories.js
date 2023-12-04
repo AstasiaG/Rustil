@@ -22,7 +22,7 @@ const swiperPopularCategories = () => {
     
       // Функция для уничтожения Swiper
       const destroySwiper = () => {
-        if (swiperOne !== null && swiperOne.destroy) {
+        if (swiperOne !== null && swiperOne.destroy && swiperOne.destroyed === false) {
           swiperOne.destroy();
           swiperOne = null;
         }

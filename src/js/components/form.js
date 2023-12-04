@@ -24,7 +24,7 @@ const form = () => {
             if (form.closest('.modal')) {
                 form.closest('.modal').classList.remove("active");
             }
-            $(".modal.success").addClass("active");
+            $(".modal.success-application").addClass("active");
             openModal();
         }
     });

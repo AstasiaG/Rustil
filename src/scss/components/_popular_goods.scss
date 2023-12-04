@@ -206,6 +206,7 @@
   .popular-goods__swiper-button-prev.swiper-button-prev,
   .popular-goods__swiper-button-next.swiper-button-next {
     @include swiper-btn-midle;
+    transform: translateY(-50%);
 
     &.swiper-button-disabled {
       opacity: 0;

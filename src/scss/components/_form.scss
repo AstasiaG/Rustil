@@ -89,6 +89,10 @@
 
   &__content-link-main {
     padding: 1.4rem 4.5rem;
+    &:hover {
+      color: $black;
+      background-color: transparent;
+    }
   }
 
   // .form__content-link-tel
@@ -179,7 +183,7 @@
       font-weight: 400;
       line-height: 130%;
       justify-content: center;
-      padding: 3.6rem 18rem;
+      padding: 2.7rem 18rem;
     }
 
     // .form__content
@@ -207,7 +211,7 @@ gap: 11.2rem;
     // .form__content-link-main
 
     &__content-link-main {
-      padding: 2.8rem 9.6rem;
+      padding: 1.9rem 9.6rem;
       font-size: 3.2rem;
     }
 

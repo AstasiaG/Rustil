@@ -199,9 +199,7 @@
       font-weight: 500;
       line-height: normal;
       text-transform: uppercase;
-      padding-bottom: 2px;
-      border-bottom: 1px solid $black;
-      transition: border-bottom 0.3s, opacity 0.3s, visibility 0.3s;
+      transition: opacity 0.3s, visibility 0.3s;
       display: block;
       width: fit-content;
 
@@ -213,10 +211,6 @@
         opacity: 0;
         visibility: hidden;
       }
-    }
-
-    &:hover span {
-      border-bottom: 1px solid transparent;
     }
   }
 

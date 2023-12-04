@@ -56,9 +56,11 @@ $('.product__summary-size').on('click', function () {
 })
 
 $('.product__summary-color').on('click', function () {
+  const color = $(this).css('background-color');
   if(!$(this).hasClass('active')) {
     $('.product__summary-color').removeClass('active');
     $(this).addClass('active');
+    $(this).css('border-color', color);
   }
 })
 
@@ -96,9 +98,9 @@ $('.product__tab').on('click', function () {
 
 //header search//
 
-$('.header__search-dropdown').hide();
 let scrollY = 0;
-function showSearch() {
+
+function openModal() {
   scrollY = window.scrollY;
   const body = document.body;
   body.style.height = "100vh";
@@ -106,24 +108,9 @@ function showSearch() {
   if (window.innerWidth > 768) {
     body.style.paddingRight = "15px";
   }
-  $('.header__top-nav').hide();
-  $('.header__top').css('justify-content', 'space-between');
-  $('.header__search-button span').show();
-  $('.header__search-button').addClass('button');
-  $('.header__search').addClass('active').one('transitionend', function () {
-    $('.header__search-dropdown').slideDown();
-  });
-  $('.header').addClass('modal-search');
-  //$('.header__search-dropdown').show();
 }
 
-function hideSearch() {
-  $('.header__search-button span').hide();
-  $('.header__search-button').removeClass('button');
-  // $('.header__search').removeClass('active');
-  $('.header__top-nav').show();
-  // $('.header').removeClass('modal-search');
-  $('.header__search-hint').hide();
+function closeModal() {
   const body = document.body;
   body.style.position = "";
   body.style.top = "";
@@ -135,12 +122,33 @@ function hideSearch() {
     null,
     window.location.pathname + window.location.search,
   );
-  // window.scrollTo(0, scrollY);
+  window.scrollTo(0, scrollY);
+}
+export default openModal;
+
+$('.header__search-dropdown').hide();
+
+function showSearch() {
+  $('.header__top-nav').hide();
+  $('.header__top').css('justify-content', 'space-between');
+  $('.header__search-button span').show();
+  $('.header__search-button').addClass('button');
+  $('.header__search').addClass('active').one('transitionend', function () {
+    $('.header__search-dropdown').slideDown();
+  });
+  $('.header').addClass('modal-search');
+}
+
+function hideSearch() {
+  $('.header__search-button span').hide();
+  $('.header__search-button').removeClass('button');
+  $('.header__top-nav').show();
+  $('.header__search-hint').hide();
   $('.header__search-dropdown').slideUp();
   setTimeout(function () {
     $('.header__search').removeClass('active');
     $('.header').removeClass('modal-search');
-}, 300);
+  }, 300);
 }
 
 $('.header__search input').on('input', function () {
@@ -161,65 +169,44 @@ $('.header__search input').on('input', function () {
     $('[data-search="history"]').show();
   }
 })
+$(function () {
+  if (window.innerWidth > 768) {
+    $('.header__search input').on('click', function () {
+      showSearch();
+      openModal();
+    });
 
-$('.header__search input').on('click', showSearch);
+    $('.header__search').on('submit', function (event) {
+      event.preventDefault();
+      hideSearch();
+      closeModal();
+    })
 
-$('.header__search').on('submit', function (event) {
-  event.preventDefault();
-  hideSearch();
-})
+    $('#clear').on('click', function () {
+      $(this).prev().val('');
+      $('.header__search-clear').hide();
+      $('.header__search-dropdown-list').show();
+      $('.header__search-dropdown-list.category').hide();
+      $('.header__search-dropdown-item').hide();
+      $('.header__search-hint').hide();
+      $('[data-search="history"]').show();
+    })
 
-$('#clear').on('click', function () {
-  $(this).prev().val('');
-  $('.header__search-clear').hide();
-  $('.header__search-dropdown-list').show();
-  $('.header__search-dropdown-list.category').hide();
-  $('.header__search-dropdown-item').hide();
-  $('.header__search-hint').hide();
-  $('[data-search="history"]').show();
-})
-
-$(document).on('click', function(event) {
-  if (!$(event.target).closest('.header__search').length) {
-    hideSearch();
-    $('.header__search-clear').hide();
+    $(document).on('click', function(event) {
+      if (!$(event.target).closest('.header__search').length) {
+        hideSearch();
+        $('.header__search-clear').hide();
+      }
+    });
   }
-});
+})
 
 //modals//
-let scrollToY = 0;
-function openModal() {
-  console.log('www');
-  scrollToY = window.scrollY;
-  const body = document.body;
-  body.style.height = "100vh";
-  body.style.overflowY = "hidden";
-  if (window.innerWidth > 768) {
-    body.style.paddingRight = "15px";
-  }
-}
-
-export default openModal;
 
 $('#modal-bill').on('click', function () {
   $(".modal.form-bill").addClass("active");
   openModal();
 })
-
-function closeModal() {
-  const body = document.body;
-  body.style.position = "";
-  body.style.top = "";
-  body.style.height = "";
-  body.style.overflowY = "";
-  body.style.paddingRight = "";
-  window.history.replaceState(
-    null,
-    null,
-    window.location.pathname + window.location.search,
-  );
-  window.scrollTo(0, scrollToY);
-}
 
 if ($(".modal__close").length) {
   $(".modal__close").on("click", function () {
@@ -231,13 +218,23 @@ if ($(".modal__close").length) {
 }
 
 document.addEventListener("click", (el) => {
-  if ($(".modal.success").hasClass("active")) {
-    const md = document.querySelector(".modal.success");
+  if ($(".modal.success-application").hasClass("active")) {
+    const md = document.querySelector(".modal.success-application");
     const wrap = document.querySelector(".modal__wrapper");
     const notWrap = el.composedPath().includes(wrap);
     const window = el.composedPath().includes(md);
     if (window && !notWrap) {
-      $(".modal.success").removeClass("active");
+      $(".modal.success-application").removeClass("active");
+      closeModal();
+    }
+  }
+  if ($(".modal.success-purchase").hasClass("active")) {
+    const md = document.querySelector(".modal.success-purchase");
+    const wrap = document.querySelector(".modal__wrapper");
+    const notWrap = el.composedPath().includes(wrap);
+    const window = el.composedPath().includes(md);
+    if (window && !notWrap) {
+      $(".modal.success-purchase").removeClass("active");
       closeModal();
     }
   }

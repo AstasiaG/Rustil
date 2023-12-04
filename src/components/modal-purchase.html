@@ -1,0 +1,60 @@
+<div class="modal form-purchase">
+  <div class="modal__wrapper">
+    <form class="purchase form__form">
+      <p class="form__title title-s">Оформление заказа</p>
+      <div class="form__input-box">
+        <input class="form__input text-sm form__input--name" type="text" placeholder="Имя" required />
+        <input class="form__input text-sm form__input--count" type="number" placeholder="Количество" required />
+        <input
+          class="form__input form__input--tel text-sm"
+          type="tel"
+          placeholder="Телефон"
+          required
+        />
+        <input class="form__input text-sm form__input--comment" type="text" placeholder="Комментарий" />
+        <input
+          class="form__input text-sm"
+          type="email"
+          placeholder="E-mail"
+          required
+        />
+        <label>
+          <input class="form__input text-sm form__input--check" type="checkbox"/>
+          Требуется доставка
+        </label>
+      </div>
+      <button
+          class="form__btn button button__arr button__arr--sg"
+          type="submit"
+        >
+          <div class="form__button-svg-box button__arr-svg-box">
+            <img
+              src="./assets/images/icons/paperclip.svg"
+              alt="булавка"
+            />
+          </div>
+          Прикрепить реквизиты
+        </button>
+      <div class="form__bottom">
+        <button
+          class="form__btn button button__arr button__arr--sg"
+          type="submit"
+        >
+          Отправить
+          <div class="form__button-svg-box button__arr-svg-box">
+            <img
+              src="./assets/images/icons/arr_right_white.svg"
+              alt="стрелка вправо"
+            />
+          </div>
+        </button>
+        <div class="form__subtitle text">
+          Нажимая на кнопку “Отправить”, Вы соглашаетесь на <a class="form__link btn-link" href="#0">обработку персональных данных</a>
+        </div>
+      </div>
+    </form>
+    <div class="modal__close">
+      <img src="./assets/images/icons/cross-black.svg" alt="">
+    </div>
+  </div>
+</div>

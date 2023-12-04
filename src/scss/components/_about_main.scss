@@ -80,9 +80,12 @@
   &__certificate {
     background-color: $light-grey;
     padding: 2.4rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 4rem;
+    &.active {
+      display: flex;
+    }
   }
 
   // .about__certificate-img-box

@@ -48,7 +48,8 @@
   & .form__form {
     padding: 0;
   }
-  &.success {
+  &.success-purchase,
+  &.success-application {
     & .modal{
       &__wrapper {
         width: 77rem;
@@ -65,6 +66,16 @@
       }
     }
   }
+  &.success-application {
+    & .modal{
+      &__wrapper {
+        background: $light-grey;
+      }
+      &__content-text {
+        width: 36rem;
+      }
+    } 
+  }
 }
 
 @media (max-width: 48em) {
@@ -80,8 +91,9 @@
       height: 8rem;
       padding: 2.4rem;
     }
-    &.success {
-      & .modal{
+    &.success-purchase,
+    &.success-application {
+      & .modal {
         &__wrapper {
           width: 67rem;
           padding: 6.4rem 4rem;

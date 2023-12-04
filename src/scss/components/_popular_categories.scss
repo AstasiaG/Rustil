@@ -108,6 +108,7 @@
   &__swiper-button-prev.swiper-button-prev,
   &__swiper-button-next.swiper-button-next {
     @include swiper-btn-midle;
+    transform: translateY(-50%);
     &.swiper-button-disabled {
       opacity: 0;
     }
