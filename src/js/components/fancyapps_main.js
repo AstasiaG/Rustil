@@ -66,7 +66,7 @@ const fancyapps = () => {
     
     });
 
-    console.log('awdAWFaWFDAW')
+ 
   });
   
 
