@@ -10,21 +10,35 @@
     </div>
     <nav class="header__top-nav">
       <ul>
-        <li class="header__top-nav-item text-sm">
-          <a href="#0">Каталог</a>
+        <li class="header__top-nav-item">
+          <a class="text-sm" href="#0">Каталог</a>
         </li>
-        <li class="header__top-nav-item text-sm">
-          <a href="#0">О компании</a>
+        <li class="header__top-nav-item">
+          <a class="text-sm" href="#0">О компании</a>
         </li>
-        <li class="header__top-nav-item text-sm">
-          <a href="#0">Оплата и доставка</a>
+        <li class="header__top-nav-item">
+          <a class="text-sm" href="#0">Оплата и доставка</a>
         </li>
-        <li class="header__top-nav-item text-sm">
-          <a href="#0">Контакты</a>
+        <li class="header__top-nav-item">
+          <a class="text-sm" href="#0">Контакты</a>
         </li>
       </ul>
+      <div class="header__top-contacts-wrap mob">
+        <div class="header__top-contacts mob">
+          <a class="header__top-contacts-tel" href="tel:84951202329">8 (495) 120-23-29</a>
+          <a class="header__top-contacts-mail text-sm" href="mailto:info@germetic-rus.ru">info@germetic-rus.ru</a>
+        </div>
+        <div class="header__top-contacts-icon button--circle mob">
+          <div class="form__content-link-tel-svg-box">
+            <img src="./assets/images/icons/call-calling.svg" alt="Телефон" />
+          </div>
+        </div>
+      </div>
     </nav>
     <form class="header__search">
+      <div class="header__search-back">
+        <img src="./assets/images/icons/arrow_left.svg" alt="">
+      </div>
       <span class="header__search-hint">Двухкомпонентные герметики</span>
       <input type="search" placeholder="Поиск товаров">
       <div class="header__search-clear" id="clear">
@@ -39,29 +53,29 @@
       </button>
       <div class="header__search-dropdown">
         <ul class="header__search-dropdown-items">
-          <li class="header__search-dropdown-item text-sm" data-search="history">
-            <a href="#0">Акриловый морозостойкий герметик</a>
+          <li class="header__search-dropdown-item" data-search="history">
+            <a class="text-sm" href="#0">Акриловый морозостойкий герметик</a>
             <div class="close-icon">
               <img src="./assets/images/icons/close-icon.svg" alt="">
             </div>
           </li>
-          <li class="header__search-dropdown-item text-sm" data-search="history">
-            <a href="#0">Акриловый морозостойкий герметик</a>
+          <li class="header__search-dropdown-item" data-search="history">
+            <a class="text-sm" href="#0">Акриловый морозостойкий герметик</a>
             <div class="close-icon">
               <img src="./assets/images/icons/close-icon.svg" alt="">
             </div>
           </li>
-          <li class="header__search-dropdown-item text-sm">
-            <a href="#0">Полиуретановые герметики 600 мл</a>
+          <li class="header__search-dropdown-item">
+            <a class="text-sm" href="#0">Полиуретановые герметики 600 мл</a>
           </li>
-          <li class="header__search-dropdown-item text-sm">
-            <a href="#0">Двухкомпонентные герметики</a>
+          <li class="header__search-dropdown-item">
+            <a class="text-sm" href="#0">Двухкомпонентные герметики</a>
           </li>
-          <li class="header__search-dropdown-item text-sm">
-            <a href="#0">Акриловые герметики</a>
+          <li class="header__search-dropdown-item">
+            <a class="text-sm" href="#0">Акриловые герметики</a>
           </li>
-          <li class="header__search-dropdown-item text-sm">
-            <a href="#0">Герметики RAL</a>
+          <li class="header__search-dropdown-item">
+            <a class="text-sm" href="#0">Герметики RAL</a>
           </li>
         </ul>
         <div class="header__search-dropdown-content">
@@ -127,32 +141,36 @@
 
                 <div class="popular-goods__card-content">
                   <p class="popular-goods__card-title">
-                    Акриловый морозостойкий герметик Рустил Акрил 15 кг
-                    белый
+                    Акриловый морозостойкий герметик Рустил Акрил 15 кг белый
                   </p>
                   <div class="popular-goods__card-price-box">
                     <div class="popular-goods__card-price-wrapper">
                       <p class="popular-goods__card-price text-sm">
                         <span class="popular-goods__card-price-num">680</span>
-                        <span class="popular-goods__card-price-text">₽/шт.</span>
+                        <span class="popular-goods__card-price-text"
+                          >₽/шт.</span
+                        >
                       </p>
                     </div>
 
-                    <div class="popular-goods__card-price-wrapper  popular-goods__card-price-wrapper--wholesale">
+                    <div
+                      class="popular-goods__card-price-wrapper popular-goods__card-price-wrapper--wholesale"
+                    >
                       <p class="popular-goods__card-wholesale-text">Опт:</p>
-                      <p
-                        class="popular-goods__card-price"
-                      >
+                      <p class="popular-goods__card-price">
                         <span class="popular-goods__card-price-num">630</span>
-                        <span class="popular-goods__card-price-text">₽/шт.</span>
+                        <span class="popular-goods__card-price-text"
+                          >₽/шт.</span
+                        >
                       </p>
                     </div>
                   </div>
                   <button class="popular-goods__card-btn button">
                     <div class="popular-goods__card-btn-svg-box">
-                      <img src="./assets/images/icons/buy.svg" alt="Купить">
+                      <img src="./assets/images/icons/buy.svg" alt="Купить" />
                     </div>
-                    Купить</button>
+                    Купить
+                  </button>
                 </div>
               </div>
             </a>
@@ -172,25 +190,30 @@
                     <div class="popular-goods__card-price-wrapper">
                       <p class="popular-goods__card-price text-sm">
                         <span class="popular-goods__card-price-num">680</span>
-                        <span class="popular-goods__card-price-text">₽/шт.</span>
+                        <span class="popular-goods__card-price-text"
+                          >₽/шт.</span
+                        >
                       </p>
                     </div>
 
-                    <div class="popular-goods__card-price-wrapper  popular-goods__card-price-wrapper--wholesale">
+                    <div
+                      class="popular-goods__card-price-wrapper popular-goods__card-price-wrapper--wholesale"
+                    >
                       <p class="popular-goods__card-wholesale-text">Опт:</p>
-                      <p
-                        class="popular-goods__card-price"
-                      >
-                      <span class="popular-goods__card-price-num">630</span>
-                        <span class="popular-goods__card-price-text">₽/шт.</span>
+                      <p class="popular-goods__card-price">
+                        <span class="popular-goods__card-price-num">630</span>
+                        <span class="popular-goods__card-price-text"
+                          >₽/шт.</span
+                        >
                       </p>
                     </div>
                   </div>
                   <button class="popular-goods__card-btn button">
                     <div class="popular-goods__card-btn-svg-box">
-                      <img src="./assets/images/icons/buy.svg" alt="Купить">
+                      <img src="./assets/images/icons/buy.svg" alt="Купить" />
                     </div>
-                    Купить</button>
+                    Купить
+                  </button>
                 </div>
               </div>
             </a>
@@ -204,32 +227,36 @@
 
                 <div class="popular-goods__card-content">
                   <p class="popular-goods__card-title">
-                    Акриловый морозостойкий герметик Рустил Акрил 15 кг
-                    белый
+                    Акриловый морозостойкий герметик Рустил Акрил 15 кг белый
                   </p>
                   <div class="popular-goods__card-price-box">
                     <div class="popular-goods__card-price-wrapper">
                       <p class="popular-goods__card-price text-sm">
                         <span class="popular-goods__card-price-num">680</span>
-                        <span class="popular-goods__card-price-text">₽/шт.</span>
+                        <span class="popular-goods__card-price-text"
+                          >₽/шт.</span
+                        >
                       </p>
                     </div>
 
-                    <div class="popular-goods__card-price-wrapper  popular-goods__card-price-wrapper--wholesale">
+                    <div
+                      class="popular-goods__card-price-wrapper popular-goods__card-price-wrapper--wholesale"
+                    >
                       <p class="popular-goods__card-wholesale-text">Опт:</p>
-                      <p
-                        class="popular-goods__card-price"
-                      >
+                      <p class="popular-goods__card-price">
                         <span class="popular-goods__card-price-num">630</span>
-                        <span class="popular-goods__card-price-text">₽/шт.</span>
+                        <span class="popular-goods__card-price-text"
+                          >₽/шт.</span
+                        >
                       </p>
                     </div>
                   </div>
                   <button class="popular-goods__card-btn button">
                     <div class="popular-goods__card-btn-svg-box">
-                      <img src="./assets/images/icons/buy.svg" alt="Купить">
+                      <img src="./assets/images/icons/buy.svg" alt="Купить" />
                     </div>
-                    Купить</button>
+                    Купить
+                  </button>
                 </div>
               </div>
             </a>
@@ -247,16 +274,37 @@
           <img src="./assets/images/icons/call-calling.svg" alt="Телефон" />
         </div>
       </div>
-      <a class="header__top-contacts-icon button--circle" href="tel:84951202329">
+      <a class="header__top-contacts-icon button--circle mob" href="tel:84951202329">
         <div class="form__content-link-tel-svg-box">
           <img src="./assets/images/icons/call-calling.svg" alt="Телефон" />
         </div>
       </a>
-      <a class="header__top-contacts-icon button--circle" href="mailto:info@germetic-rus.ru">
+      <div class="header__top-contacts-icon button--circle mob dropdown">
         <div class="form__content-link-tel-svg-box">
           <img src="./assets/images/icons/contacts_mail.svg" alt="Почта" />
         </div>
-      </a>
+        <div class="header__dropdown">
+          <div class="header__dropdown-title unbounded">Свяжитесь с нами любым удобным способом</div>
+          <a class="header__dropdown-contact-item" href="tel:84951202329">
+            <div class="header__dropdown-contact-icon button--circle">
+              <img src="./assets/images/icons/call-calling.svg" alt="">
+            </div>
+            <div class="header__dropdown-contact title-s">8 (495) 120-23-29</div>
+          </a>
+          <a class="header__dropdown-contact-item" href="tel:84951202329">
+            <div class="header__dropdown-contact-icon whatsapp">
+              <img src="./assets/images/icons/whatsapp.svg" alt="">
+            </div>
+            <div class="header__dropdown-contact title-s">8 (985) 765-30-21</div>
+          </a>
+          <a class="header__dropdown-contact-item" href="mailto:info@germetic-rus.ru">
+            <div class="header__dropdown-contact-icon button--circle">
+              <img src="./assets/images/icons/contacts_mail.svg" alt="">
+            </div>
+            <div class="header__dropdown-contact title-s">info@germetic-rus.ru</div>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
   <div class="header__bottom">
@@ -265,6 +313,7 @@
         <span>Полиуретановые герметики 600 мл</span>
         <div class="header__dropdown">
           <div class="container header__dropdown-wrap">
+            <div class="header__dropdown-title">Полиуретановые герметики 600 мл</div>
             <div class="header__dropdown-list-wrap">
               <p class="header__dropdown-list-title text">Цвет</p>
               <div class="header__dropdown-list">
@@ -304,17 +353,19 @@
                 </ul>
               </div>
             </div>
-            <div class="header__dropdown-card">
-              <div class="header__dropdown-card-image">
-                <img src="./assets/images/card-image.webp" alt="">
+            <div class="header__dropdown-card-wrap">
+              <div class="header__dropdown-card">
+                <div class="header__dropdown-card-image">
+                  <img src="./assets/images/card-image.webp" alt="">
+                </div>
+                <div class="header__dropdown-card-text text">Акриловый морозостойкий герметик Рустил Акрил 15 кг белый</div>
               </div>
-              <div class="header__dropdown-card-text text">Акриловый морозостойкий герметик Рустил Акрил 15 кг белый</div>
-            </div>
-            <div class="header__dropdown-card">
-              <div class="header__dropdown-card-image">
-                <img src="./assets/images/card-image2.webp" alt="">
+              <div class="header__dropdown-card">
+                <div class="header__dropdown-card-image">
+                  <img src="./assets/images/card-image2.webp" alt="">
+                </div>
+                <div class="header__dropdown-card-text text">Полиуретановый герметик Рустил 1К PU25 600 мл RAL7004</div>
               </div>
-              <div class="header__dropdown-card-text text">Полиуретановый герметик Рустил 1К PU25 600 мл RAL7004</div>
             </div>
           </div>
         </div>
@@ -323,9 +374,10 @@
         <span>Герметики RAL</span>
         <div class="header__dropdown">
           <div class="container header__dropdown-wrap">
+            <div class="header__dropdown-title">Герметики RAL</div>
             <div class="header__dropdown-list-wrap">
               <div class="header__dropdown-list">
-                <ul>
+                <ul class="ral">
                   <li>
                     <a class="header__dropdown-list-item text-sm" href="#0">Полиуретановые герметик RAL</a>
                   </li>
@@ -353,17 +405,19 @@
                 </ul>
               </div>
             </div>
-            <div class="header__dropdown-card">
-              <div class="header__dropdown-card-image">
-                <img src="./assets/images/card-image.webp" alt="">
+            <div class="header__dropdown-card-wrap">
+              <div class="header__dropdown-card">
+                <div class="header__dropdown-card-image">
+                  <img src="./assets/images/card-image.webp" alt="">
+                </div>
+                <div class="header__dropdown-card-text text">Акриловый морозостойкий герметик Рустил Акрил 15 кг белый</div>
               </div>
-              <div class="header__dropdown-card-text text">Акриловый морозостойкий герметик Рустил Акрил 15 кг белый</div>
-            </div>
-            <div class="header__dropdown-card">
-              <div class="header__dropdown-card-image">
-                <img src="./assets/images/card-image2.webp" alt="">
+              <div class="header__dropdown-card">
+                <div class="header__dropdown-card-image">
+                  <img src="./assets/images/card-image2.webp" alt="">
+                </div>
+                <div class="header__dropdown-card-text text">Полиуретановый герметик Рустил 1К PU25 600 мл RAL7004</div>
               </div>
-              <div class="header__dropdown-card-text text">Полиуретановый герметик Рустил 1К PU25 600 мл RAL7004</div>
             </div>
           </div>
         </div>

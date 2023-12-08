@@ -5,6 +5,7 @@
     margin-bottom: 4.8rem;
   }
   &__content {
+    position: relative;
     display: flex;
     justify-content: space-between;
   }
@@ -44,6 +45,9 @@
     }
   }
   &__aside {
+    position: sticky;
+    top: 5rem;
+    height: fit-content;
     width: 77rem;
     & .product {
       &__info {

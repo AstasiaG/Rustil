@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <include src="./components/header.html"></include>
+  <main>
+    <section class="catalog">
+      <div class="container">
+        <div class="catalog__title title-sm">Каталог</div>
+        <ul class="catalog__categories">
+          <li class="payment__item active">
+            <div class="payment__item-wrapper">
+              <div class="payment__item-inner">
+                <p class="payment__text text-sm">
+                  По назначению
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="payment__item">
+            <div class="payment__item-wrapper">
+              <div class="payment__item-inner">
+                <p class="payment__text text-sm">
+                  По составу/типу
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="payment__item">
+            <div class="payment__item-wrapper">
+              <div class="payment__item-inner">
+                <p class="payment__text text-sm">
+                  По цвету
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="catalog__sort">
+          <button class="btn--transparent active" type="button">Полиуретановые</button>
+          <button class="btn--transparent" type="button">Акриловые</button>
+          <button class="btn--transparent" type="button">Гибридный полимер</button>
+          <button class="btn--transparent" type="button">Однокомпонентные полиуретановые</button>
+          <button class="btn--transparent" type="button">Двухкомпонентные полиуретановые</button>
+          <button class="btn--transparent" type="button">Клей-герметики полиуретановые герметики</button>
+          <button class="btn--transparent" type="button">Черные полиуретановые герметики</button>
+          <button class="btn--transparent--red" type="button">Показать ещё</button>
+        </div>
+        <div class="catalog__content">
+          <div class="catalog__filters">
+            <div class="catalog__filters-title title-s">Фильтры</div>
+            <div class="catalog__filters-list-wrap">
+              <div class="catalog__filters-list">
+                <div class="catalog__filters-list-title text">Бренд</div>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="brand">
+                  Рустил
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="brand">
+                  Гермаст
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="brand">
+                  Адвафлекс
+                </label>
+              </div>
+              <div class="catalog__filters-list">
+                <div class="catalog__filters-list-title text">Состав</div>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="compound">
+                  Полиуретановые
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="compound">
+                  Гибридный полимер
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="compound">
+                  Акриловые
+                </label>
+              </div>
+              <div class="catalog__filters-list">
+                <div class="catalog__filters-list-title text">Тип</div>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="type">
+                  Однокомпонентный
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="type">
+                  Двухкомпонентный
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="type">
+                  Клей-герметик
+                </label>
+              </div>
+              <div class="catalog__filters-list">
+                <div class="catalog__filters-list-title text">Назначение</div>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="purpose">
+                  Для бетона
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="purpose">
+                  Для металла
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="purpose">
+                  Для дерева
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="purpose">
+                  Для пластика
+                </label>
+              </div>
+              <div class="catalog__filters-list">
+                <div class="catalog__filters-list-title text">Цвет</div>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="color">
+                  Цвета RAL
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="color">
+                  Белый
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="color">
+                  Серый
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="color">
+                  Светло-серый
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="color">
+                  Темно-серый
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="color">
+                  Черный
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="color">
+                  Черный
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="color">
+                  Черный
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="color">
+                  Черный
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="color">
+                  Черный
+                </label>
+                <button class="btn-link" type="button">показать все</button>
+              </div>
+              <div class="catalog__filters-list">
+                <div class="catalog__filters-list-title text">Упаковка</div>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="size">
+                  600 мл
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="size">
+                  12,5 кг
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="size">
+                  15 кг
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="checkbox" name="size">
+                  16,5 кг
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__list-wrap">
+            <div class="catalog__filters-active">
+              <div class=""></div>
+            </div>
+            <div class="catalog__list-sort dropdown">
+              <span class="text-sm">Сортировка</span>
+              <div class="catalog__list-sort-icon">
+                <img src="./assets/images/icons/arr-down.svg" alt="">
+              </div>
+              <div class="header__dropdown">
+                <label class="catalog__filter text-sm">
+                  <input type="radio" name="sort">
+                  Сначала дешевле
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="radio" name="sort">
+                  Сначала дороже
+                </label>
+                <label class="catalog__filter text-sm">
+                  <input type="radio" name="sort">
+                  Сначала популярные
+                </label>
+              </div>
+            </div>
+            <div class="catalog__list">
+              <a href="#" class="popular-goods__card-link">
+                <div class="popular-goods__card">
+                  <div class="popular-goods__card-img-box">
+                    <img src="./assets/images/popular_goods_1.webp" alt="" />
+                  </div>
+
+                  <div class="popular-goods__card-content">
+                    <p class="popular-goods__card-title">
+                      Акриловый морозостойкий герметик Рустил Акрил 15 кг белый
+                    </p>
+                    <div class="popular-goods__card-price-box">
+                      <div class="popular-goods__card-price-wrapper">
+                        <p class="popular-goods__card-price text-sm">
+                          <span class="popular-goods__card-price-num">680</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+
+                      <div
+                        class="popular-goods__card-price-wrapper popular-goods__card-price-wrapper--wholesale"
+                      >
+                        <p class="popular-goods__card-wholesale-text">Опт:</p>
+                        <p class="popular-goods__card-price">
+                          <span class="popular-goods__card-price-num">630</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <button class="popular-goods__card-btn button">
+                      <div class="popular-goods__card-btn-svg-box">
+                        <img src="./assets/images/icons/buy.svg" alt="Купить" />
+                      </div>
+                      Купить
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="popular-goods__card-link">
+                <div class="popular-goods__card">
+                  <div class="popular-goods__card-img-box">
+                    <img src="./assets/images/popular_goods_2.webp" alt="" />
+                  </div>
+
+                  <div class="popular-goods__card-content">
+                    <p class="popular-goods__card-title">
+                      Полиуретановый герметик Рустил 1К PU25 600 мл RAL7004
+                    </p>
+                    <div class="popular-goods__card-price-box">
+                      <div class="popular-goods__card-price-wrapper">
+                        <p class="popular-goods__card-price text-sm">
+                          <span class="popular-goods__card-price-num">680</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+
+                      <div
+                        class="popular-goods__card-price-wrapper popular-goods__card-price-wrapper--wholesale"
+                      >
+                        <p class="popular-goods__card-wholesale-text">Опт:</p>
+                        <p class="popular-goods__card-price">
+                          <span class="popular-goods__card-price-num">630</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <button class="popular-goods__card-btn button">
+                      <div class="popular-goods__card-btn-svg-box">
+                        <img src="./assets/images/icons/buy.svg" alt="Купить" />
+                      </div>
+                      Купить
+                    </button>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="popular-goods__card-link">
+                <div class="popular-goods__card">
+                  <div class="popular-goods__card-img-box">
+                    <img src="./assets/images/popular_goods_1.webp" alt="" />
+                  </div>
+
+                  <div class="popular-goods__card-content">
+                    <p class="popular-goods__card-title">
+                      Акриловый морозостойкий герметик Рустил Акрил 15 кг белый
+                    </p>
+                    <div class="popular-goods__card-price-box">
+                      <div class="popular-goods__card-price-wrapper">
+                        <p class="popular-goods__card-price text-sm">
+                          <span class="popular-goods__card-price-num">680</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+
+                      <div
+                        class="popular-goods__card-price-wrapper popular-goods__card-price-wrapper--wholesale"
+                      >
+                        <p class="popular-goods__card-wholesale-text">Опт:</p>
+                        <p class="popular-goods__card-price">
+                          <span class="popular-goods__card-price-num">630</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <button class="popular-goods__card-btn button">
+                      <div class="popular-goods__card-btn-svg-box">
+                        <img src="./assets/images/icons/buy.svg" alt="Купить" />
+                      </div>
+                      Купить
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="popular-goods__card-link">
+                <div class="popular-goods__card">
+                  <div class="popular-goods__card-img-box">
+                    <img src="./assets/images/popular_goods_2.webp" alt="" />
+                  </div>
+
+                  <div class="popular-goods__card-content">
+                    <p class="popular-goods__card-title">
+                      Полиуретановый герметик Рустил 1К PU25 600 мл RAL7004
+                    </p>
+                    <div class="popular-goods__card-price-box">
+                      <div class="popular-goods__card-price-wrapper">
+                        <p class="popular-goods__card-price text-sm">
+                          <span class="popular-goods__card-price-num">680</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+
+                      <div
+                        class="popular-goods__card-price-wrapper popular-goods__card-price-wrapper--wholesale"
+                      >
+                        <p class="popular-goods__card-wholesale-text">Опт:</p>
+                        <p class="popular-goods__card-price">
+                          <span class="popular-goods__card-price-num">630</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <button class="popular-goods__card-btn button">
+                      <div class="popular-goods__card-btn-svg-box">
+                        <img src="./assets/images/icons/buy.svg" alt="Купить" />
+                      </div>
+                      Купить
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="popular-goods__card-link">
+                <div class="popular-goods__card">
+                  <div class="popular-goods__card-img-box">
+                    <img src="./assets/images/popular_goods_1.webp" alt="" />
+                  </div>
+
+                  <div class="popular-goods__card-content">
+                    <p class="popular-goods__card-title">
+                      Акриловый морозостойкий герметик Рустил Акрил 15 кг белый
+                    </p>
+                    <div class="popular-goods__card-price-box">
+                      <div class="popular-goods__card-price-wrapper">
+                        <p class="popular-goods__card-price text-sm">
+                          <span class="popular-goods__card-price-num">680</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+
+                      <div
+                        class="popular-goods__card-price-wrapper popular-goods__card-price-wrapper--wholesale"
+                      >
+                        <p class="popular-goods__card-wholesale-text">Опт:</p>
+                        <p class="popular-goods__card-price">
+                          <span class="popular-goods__card-price-num">630</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <button class="popular-goods__card-btn button">
+                      <div class="popular-goods__card-btn-svg-box">
+                        <img src="./assets/images/icons/buy.svg" alt="Купить" />
+                      </div>
+                      Купить
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="popular-goods__card-link">
+                <div class="popular-goods__card">
+                  <div class="popular-goods__card-img-box">
+                    <img src="./assets/images/popular_goods_2.webp" alt="" />
+                  </div>
+
+                  <div class="popular-goods__card-content">
+                    <p class="popular-goods__card-title">
+                      Полиуретановый герметик Рустил 1К PU25 600 мл RAL7004
+                    </p>
+                    <div class="popular-goods__card-price-box">
+                      <div class="popular-goods__card-price-wrapper">
+                        <p class="popular-goods__card-price text-sm">
+                          <span class="popular-goods__card-price-num">680</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+
+                      <div
+                        class="popular-goods__card-price-wrapper popular-goods__card-price-wrapper--wholesale"
+                      >
+                        <p class="popular-goods__card-wholesale-text">Опт:</p>
+                        <p class="popular-goods__card-price">
+                          <span class="popular-goods__card-price-num">630</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <button class="popular-goods__card-btn button">
+                      <div class="popular-goods__card-btn-svg-box">
+                        <img src="./assets/images/icons/buy.svg" alt="Купить" />
+                      </div>
+                      Купить
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="popular-goods__card-link">
+                <div class="popular-goods__card">
+                  <div class="popular-goods__card-img-box">
+                    <img src="./assets/images/popular_goods_1.webp" alt="" />
+                  </div>
+
+                  <div class="popular-goods__card-content">
+                    <p class="popular-goods__card-title">
+                      Акриловый морозостойкий герметик Рустил Акрил 15 кг белый
+                    </p>
+                    <div class="popular-goods__card-price-box">
+                      <div class="popular-goods__card-price-wrapper">
+                        <p class="popular-goods__card-price text-sm">
+                          <span class="popular-goods__card-price-num">680</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+
+                      <div
+                        class="popular-goods__card-price-wrapper popular-goods__card-price-wrapper--wholesale"
+                      >
+                        <p class="popular-goods__card-wholesale-text">Опт:</p>
+                        <p class="popular-goods__card-price">
+                          <span class="popular-goods__card-price-num">630</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <button class="popular-goods__card-btn button">
+                      <div class="popular-goods__card-btn-svg-box">
+                        <img src="./assets/images/icons/buy.svg" alt="Купить" />
+                      </div>
+                      Купить
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="popular-goods__card-link">
+                <div class="popular-goods__card">
+                  <div class="popular-goods__card-img-box">
+                    <img src="./assets/images/popular_goods_2.webp" alt="" />
+                  </div>
+
+                  <div class="popular-goods__card-content">
+                    <p class="popular-goods__card-title">
+                      Полиуретановый герметик Рустил 1К PU25 600 мл RAL7004
+                    </p>
+                    <div class="popular-goods__card-price-box">
+                      <div class="popular-goods__card-price-wrapper">
+                        <p class="popular-goods__card-price text-sm">
+                          <span class="popular-goods__card-price-num">680</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+
+                      <div
+                        class="popular-goods__card-price-wrapper popular-goods__card-price-wrapper--wholesale"
+                      >
+                        <p class="popular-goods__card-wholesale-text">Опт:</p>
+                        <p class="popular-goods__card-price">
+                          <span class="popular-goods__card-price-num">630</span>
+                          <span class="popular-goods__card-price-text"
+                            >₽/шт.</span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <button class="popular-goods__card-btn button">
+                      <div class="popular-goods__card-btn-svg-box">
+                        <img src="./assets/images/icons/buy.svg" alt="Купить" />
+                      </div>
+                      Купить
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <div class="catalog__list-bottom">
+                <button class="button btn-more-arr">
+                  Загрузить ещё
+
+                </button>
+                <div class="catalog__list-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="article article-catalog">
+      <div class="container">
+        <div class="catalog__article-wrapper">
+          <div class="catalog__article-left">
+            <div class="catalog__article-title">Герметики</div>
+            <div class="catalog__article-image">
+              <img src="./assets/images/price-list-bg.webp" alt="">
+            </div>
+          </div>
+          <div class="catalog__article-content">
+            <p>Герметики разделяют по таким признакам, как состав и назначение. По составу герметики 
+              можно разделить на герметик полиуретановый (клей-герметик полиуретановый), силиконовый, 
+              тиоколовый и акриловый герметик. В свою очередь, полиуретановый герметик для швов разделяют 
+              на двухкомпонентный полиуретановый герметик, на многокомпонентный и на однокомпонентный 
+              полиуретановый герметик. Что касается акриловых герметиков, то их различают по назначению – 
+              для теплоизоляции, для дерева, металла и так далее. Акриловые герметики отличаются самым малым 
+              периодом высыхания и простотой применения. Любой герметик применяется для затирки и 
+              герметизации швов. Конопатка швов герметиком не позволяет влаге, пыли и грязи попадать внутрь 
+              шва, вызывая разрушение материала. Полиуретановый герметик применяется для герметизации и 
+              заделки швов, подходит для практически любых материалов. Существует герметик для межпанельных 
+              швов, для сварных швов, для швов ламинат, для швов плитки. Кроме того, различают отдельные виды 
+              герметиков – герметик «теплый шов», который может быть для дерева (для швов деревянного дома), 
+              бетонных швов и так далее. Отдельно стоит выделить герметик для деформационных швов, который 
+              отличается не только высокой степенью адгезии, но и высокой эластичностью.</p>
+            <div clss="catalog__article-content-bottom">
+              <p>
+                Если вас интересуют герметики на акриловой или полиуретановой основе, – посетите наш 
+                интернет магазин. Здесь вы найдете все, что вам нужно.
+              </p>
+              <p>
+                По любым возникшим вопросам, Вас всегда готовы проконсультировать наши специалисты. Будем рады сотрудничеству!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="catalog__form">
+
+    </section>
+  </main>
+  <include src="./components/modal-success.html"></include>
+  <include src="./components/footer.html"></include>
+</body>
+</html>
