@@ -1,0 +1,90 @@
+.error-page {
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  &__content {
+    width: 37.5rem;
+    &-title {
+      font-size: 9rem;
+      margin-bottom: 3.2rem;
+    }
+    &-subtitle {
+      margin-bottom: 3.2rem;
+    }
+  }
+  &__image {
+    width: 50.6rem;
+    height: 37.1rem;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right;
+    }
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    & .btn--circle {
+      background-color: $black;
+      & svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      &:hover {
+        background-color: $red;
+      }
+    }
+    & span {
+      width: 21.8rem;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .error-page {
+    margin-top: 12rem;
+    margin-bottom: 20rem;
+    &__inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4rem;
+    }
+    &__content {
+      width: 100%;
+      &-title {
+        font-size: 12rem;
+        margin-bottom: 4.8rem;
+      }
+      &-subtitle {
+        margin-bottom: 4.8rem;
+      }
+    }
+    &__image {
+      width: 100%;
+      height: 52rem;
+    }
+    &__button {
+      display: flex;
+      gap: 3.2rem;
+      & span {
+        width: 43.6rem;
+      }
+      & .btn--circle {
+        width: 11.2rem;
+        height: 11.2rem;
+        & .btn-swiper__svg-box {
+          width: 4rem;
+          height: 3rem;
+        }
+      }
+    }
+  }
+}

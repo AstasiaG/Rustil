@@ -37,35 +37,95 @@ body {
 
 //checkbox
 
-input[type=checkbox] {
-  position: relative;
+input[type=checkbox],
+input[type=radio] {
+  -webkit-appearance: none;
   cursor: pointer;
 }
 input[type=checkbox]:before {
   content: "";
-  display: block;
+  display: flex;
   position: absolute;
   width: 2rem;
   height: 2rem;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
-  border: 0.1rem solid $red;
+  border: 0.1rem solid #e33c18;
   background-color: transparent;
+  align-items: center;
+  justify-content: center;
 }
 input[type=checkbox]:checked:after {
   content: "";
   display: block;
   width: 0.6rem;
   height: 1rem;
-  border: solid $red;
+  border: solid #e33c18;
   border-width: 0 0.1rem 0.1rem 0;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   position: absolute;
-  top: 0.7rem;
-  left: 0.5rem;
+  top: 0.55rem;
+  left: 0.7rem;
 }
+
+.form__select {
+  position: relative;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid $grey;
+  transition: border-bottom 0.3s;
+  height: 3.8rem;
+  &.selectize-control::after {
+    content: "";
+    display: block;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 0.75rem;
+    width: 1.4rem;
+    height: 0.7rem;
+    background: url(./assets/images/icons/arr-down.svg) no-repeat center/contain;
+  }
+}
+
+.selectize-input,
+.option {
+  cursor: pointer;
+}
+.selectize-input input {
+  caret-color: transparent;
+}
+
+.option {
+  margin-bottom: 1.6rem;
+}
+
+.selectize-control .selectize-input input::placeholder {
+  color: $grey;
+}
+
+.selectize-dropdown {
+  position: absolute;
+  z-index: 2;
+  height: fit-content;
+  max-height: 25rem;
+  top: 4rem !important;
+  padding: 2rem 2rem 0;
+  overflow-y: scroll;
+  // overflow-x: hidden;
+  border-bottom: 0;
+  background-color: $light-grey;
+  box-shadow: 0px 1rem 2.8rem rgba(58, 58, 58, 0.15);
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $grey;
+    border-radius: 6px;
+  }
+}
+
 
 //text
 .title {
@@ -193,6 +253,41 @@ input[type=checkbox]:checked:after {
   }
 }
 
+.btn--red {
+  font-family: "Inter";
+  color: $red;
+  padding: 1.2rem 2.2rem;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 10rem;
+  border: 1px solid $red;
+  background-color: transparent;
+  font-size: 1.6rem;
+  transition: color 0.3s, background-color 0.3s;
+  &:hover {
+    color: $white;
+    background-color: $red;
+  }
+}
+
+.btn--grey {
+  position: relative;
+  z-index: 1;
+  font-family: "Inter";
+  color: $black;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 10rem;
+  border: 1px solid $black;
+  background-color: $light-grey;
+  padding: 1.2rem 2.2rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
 .button__arr {
   position: relative;
   z-index: 1;
@@ -236,7 +331,8 @@ white-space: nowrap;
 }
 
 .swiper-button-prev.btn-swiper,
-.swiper-button-next.btn-swiper {
+.swiper-button-next.btn-swiper,
+.btn--circle {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
@@ -249,9 +345,11 @@ white-space: nowrap;
   background-color: transparent;
   overflow: hidden;
   padding: 0;
+  color: $black;
 
   &:hover {
     background-color: $black;
+    color: $white;
 
     & .btn-swiper__svg-box {
       & svg {
@@ -271,6 +369,12 @@ white-space: nowrap;
       stroke: $black;
       object-fit: contain;
     }
+  }
+}
+.btn--circle {
+  &.active {
+    background-color: $black;
+    color: $white;
   }
 }
 
@@ -393,6 +497,40 @@ left: 0;
    
     }
 
+  }
+
+  //checkbox
+  input[type=checkbox]:before {
+    width: 4rem;
+    height: 4rem;
+    border: 0.2rem solid #e33c18;
+  }
+  input[type=checkbox]:checked:after {
+    content: "";
+    width: 1.2rem;
+    height: 2rem;
+    border-width: 0 0.2rem 0.2rem 0;
+    top: 0.7rem;
+    left: 1.4rem;
+  }
+
+  .form__select {
+    padding-bottom: 3.2rem;
+    height: 6.6rem;
+    &.selectize-control::after {
+      top: 0.75rem;
+      width: 2.8rem;
+      height: 1.4rem;
+    }
+  }
+  .option {
+    margin-bottom: 3.2rem;
+  }
+  .selectize-dropdown {
+    max-height: 30rem;
+    height: fit-content;
+    top: 6.6rem !important;
+    padding: 4rem 4rem 0;
   }
 
 }

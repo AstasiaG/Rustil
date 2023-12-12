@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <include src="./components/header.html"></include>
+  <main>
+    <section class="error-page">
+      <div class="container">
+        <div class="error-page__inner">
+          <div class="error-page__content">
+            <div class="error-page__content-title title">404</div>
+            <div class="error-page__content-subtitle title-s">Страница не найдена</div>
+            <div class="error-page__content-text text">
+              Возможно страница устарела, была удалена, или был введен неверный адрес в адресной строке.
+            </div>
+          </div>
+          <div class="error-page__image">
+            <img src="./assets/images/price-list-bg.webp" alt="">
+          </div>
+          <a class="error-page__button">
+            <div class="btn--circle">
+              <div class="btn-swiper__svg-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
+                  <path d="M2 8H18M18 8L12.2222 2M18 8L12.2222 14" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <span class="text">Вернуться на главную страницу</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <include src="./components/footer.html"></include>
+</body>
+</html>
