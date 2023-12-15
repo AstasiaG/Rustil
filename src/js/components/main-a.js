@@ -454,11 +454,11 @@ $('.header__search input').on('input', function () {
     $('.header__search-dropdown-item').show();
     $('.header__search-hint').show();
     if (window.innerWidth > 768) {
-      $('.header__search-hint').css('left', `${4 + ($(this).val().length * 0.93)}rem`)
+      $('.header__search-hint').css('left', `${4 + ($(this).val().length * 1.03)}rem`)
     }
     if (window.innerWidth < 769) {
       $('.header__search-button').hide();
-      $('.header__search-hint').css('left', `${15 + ($(this).val().length * 1.35)}rem`)
+      $('.header__search-hint').css('left', `${15 + ($(this).val().length * 1.75)}rem`)
     }
     $('[data-search="history"]').hide();
   } else {
@@ -554,11 +554,11 @@ $('.form__file').on('click', '.icon-close', function (e) {
   e.preventDefault();
   $('.form__file').find('input').val('');
   $('.file__size').hide();
-  $('.form__button-svg-box.button__arr-svg-box.icon-close').hide();
   $('.form__file').addClass('button');
   $('.form__file').removeClass('btn--transparent');
   $('.form__file span.name').text('Прикрепить реквизиты');
   $('.form__button-svg-box.button__arr-svg-box').show();
+  $(this).hide();
 })
 
 document.addEventListener("click", (el) => {
