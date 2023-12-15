@@ -3,22 +3,53 @@
     <form class="form__form">
       <p class="form__title title-s">Получит счёт/КП</p>
       <div class="form__input-box">
-        <input class="form__input text-sm form__input--name" type="text" placeholder="Имя" required />
-        <input class="form__input text-sm form__input--count" type="number" placeholder="Количество" required />
-        <input
+        <div class="form__input-group">
+          <input class="form__input text-sm form__input--name" type="text" placeholder="Имя" pattern="\D+"/>
+          <span class="error">Данные введены некорректно</span>
+        </div>
+        <div class="form__input-group">
+          <input class="form__input text-sm form__input--count" type="number" placeholder="Количество" pattern="\d"/>
+          <span class="error">Данные введены некорректно</span>
+        </div>
+        <div class="form__input-group">
+          <input
           class="form__input form__input--tel text-sm"
           type="tel"
-          placeholder="Телефон"
-          required
-        />
-        <input class="form__input text-sm form__input--company" type="text" placeholder="Название или ИНН компании" required />
-        <input
-          class="form__input text-sm"
-          type="email"
-          placeholder="E-mail"
-          required
-        />
+          placeholder="Телефон"/>
+          <span class="error">Данные введены некорректно</span>
+        </div>
         <input class="form__input text-sm form__input--comment" type="text" placeholder="Комментарий" />
+        <div class="form__input-group">
+          <input
+            class="form__input text-sm form__input--mail"
+            type="email"
+            placeholder="E-mail" />
+          <span class="error">Данные введены некорректно</span>
+        </div>
+        <div class="form__input-group">
+          <label class="catalog__filter text-sm">
+            <input class="form__input text-sm" type="checkbox"/>
+            Требуется доставка
+          </label>
+        </div>
+      </div>
+      <div class="form__input-group">
+        <label class="button form__file button__arr">
+          <input type="file"/>
+          <div class="form__button-svg-box button__arr-svg-box">
+            <img
+              src="./assets/images/icons/paperclip.svg"
+              alt=""
+            />
+          </div>
+          <span class="name">Прикрепить реквизиты</span>
+          <span class="file__size"></span>
+          <div class="form__button-svg-box button__arr-svg-box icon-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
+              <path d="M1 0.5L6 5.5M11 10.5L6 5.5M6 5.5L11 0.5M6 5.5L1 10.5" stroke="#1C1C1C"/>
+            </svg>
+          </div>
+        </label>
       </div>
       <div class="form__bottom">
         <button

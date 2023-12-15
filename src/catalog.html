@@ -844,6 +844,31 @@
           </div>
         </div>
     </section>
+
+    <section class="info hidden">
+      <div class="container">
+        <div class="info__title title">Каталог полиуретановые герметики 600 мл</div>
+        <div class="info__content">
+          <div class="info__text text">
+            <p>
+              Полиуретановые герметики - это новое поколение высококачественных материалов, разработанных 
+              для заполнения и герметизации различных поверхностей.
+            </p>
+            <p>
+              Одним из главных преимуществ полиуретановых герметиков является их высокая прочность и эластичность. 
+              Это позволяет им сохранять сцепление с поверхностью даже при высоких температурах, вибрациях и 
+              деформациях. Благодаря таким свойствам, полиуретановые герметики могут использоваться в различных 
+              областях, включая строительство, автомобильную и судостроительную промышленность, а также в 
+              производстве электроники и бытовой техники.
+            </p>
+          </div>
+          <div class="info__image">
+            <img src="./assets/images/popular_goods_1.webp" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="article article-catalog">
       <div class="container">
         <div class="article-catalog__wrapper">
@@ -901,14 +926,17 @@
           <form class="form__form">
             <p class="form__title title-s">Заполните форму</p>
             <div class="form__input-box">
-              <select class="form__select text-sm form__input--type" name="type" placeholder="Тип" required>
+              <select class="form__select text-sm form__input--type" name="type" placeholder="Тип">
                 <option></option>
                 <option>Рустил</option>
                 <option>Бетон</option>
                 <option>Акрил</option>
               </select>
-              <input class="form__input text-sm form__input--name" type="text" placeholder="Имя" required />
-              <select class="form__select text-sm form__input--color" placeholder="Цвет" name="color" required>
+              <div class="form__input-group">
+                <input class="form__input text-sm form__input--name" type="text" placeholder="Имя" pattern="\D+"/>
+                <span class="error">Данные введены некорректно</span>
+              </div>
+              <select class="form__select text-sm form__input--color" placeholder="Цвет" name="color">
                 <option></option>
                 <option>Серый</option>
                 <option>Темно-серый</option>
@@ -919,30 +947,28 @@
                 <option>Светло-серый</option>
                 <option>Белый</option>
               </select>
-              <input
-                class="form__input text-sm"
-                type="email"
-                placeholder="E-mail"
-                required
-              />
+              <div class="form__input-group">
+                <input
+                  class="form__input text-sm form__input--mail"
+                  type="email"
+                  placeholder="E-mail" />
+                <span class="error">Данные введены некорректно</span>
+              </div>
               <input
                 class="form__input text-sm"
                 type="text"
-                placeholder="Объем"
-                required
-              />
-              <input
+                placeholder="Объем"/>
+              <div class="form__input-group">
+                <input
                 class="form__input form__input--tel text-sm"
                 type="tel"
-                placeholder="Телефон"
-                required
-              />
+                placeholder="Телефон"/>
+                <span class="error">Данные введены некорректно</span>
+              </div>
               <input
                 class="form__input text-sm"
                 type="text"
-                placeholder="Желаемые сроки"
-                required
-              />
+                placeholder="Желаемые сроки"/>
               <button
                 class="form__btn button button__arr button__arr--sg"
                 type="submit"

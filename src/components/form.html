@@ -4,19 +4,24 @@
       <form class="form__form">
         <p class="form__title title-s">Заполните форму</p>
         <div class="form__input-box">
-          <input class="form__input text-sm form__input--name" type="text" placeholder="Имя" required />
-          <input
+          <div class="form__input-group">
+            <input class="form__input text-sm form__input--name" type="text" placeholder="Имя" pattern="\D+"/>
+            <span class="error">Данные введены некорректно</span>
+          </div>
+          <div class="form__input-group">
+            <input
             class="form__input form__input--tel text-sm"
             type="tel"
-            placeholder="Телефон"
-            required
-          />
-          <input
-            class="form__input text-sm"
-            type="email"
-            placeholder="E-mail"
-            required
-          />
+            placeholder="Телефон"/>
+            <span class="error">Данные введены некорректно</span>
+          </div>
+          <div class="form__input-group">
+            <input
+              class="form__input text-sm form__input--mail"
+              type="email"
+              placeholder="E-mail" />
+            <span class="error">Данные введены некорректно</span>
+          </div>
           <button
             class="form__btn button button__arr button__arr--sg"
             type="submit"

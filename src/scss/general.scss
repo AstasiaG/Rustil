@@ -36,7 +36,9 @@ body {
 }
 
 //checkbox
-
+input[type=file] {
+  display: none;
+}
 input[type=checkbox],
 input[type=radio] {
   -webkit-appearance: none;
@@ -310,6 +312,7 @@ white-space: nowrap;
 }
 
 .btn-link {
+  display: inline-block;
   width: fit-content;
   font-family: 'Inter';
   font-size: 1.4rem;
@@ -428,6 +431,10 @@ left: 0;
   filter: grayscale(1);
 }
 
+.hidden{
+  display: none;
+}
+
 @media (max-width: 48em) {
   .title {
     font-size: 5.2rem;
@@ -461,7 +468,7 @@ left: 0;
   }
   
   .button__arr {
-    padding: 3.6rem 8rem;
+    padding: 2.8rem 8rem;
     gap: 3.2rem;
     &-svg-box {
       width: 3.2rem;

@@ -26,7 +26,7 @@
     margin-top: 3.2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.4rem 5.6rem;
+    gap: 3.2rem 5.6rem;
   }
 
   // .form__input
@@ -52,11 +52,27 @@
     &:nth-child(3) {
       align-self: flex-end;
     }
+    &.invalid {
+      color: $red;
+    }
+    &+span {
+      display: none;
+      font-family: 'Inter';
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 0.4rem;
+      color: $red;
+      &.active {
+        display: block;
+      }
+    }
   }
 
   // .form__btn
 
   &__btn {
+    margin-top: -1.5rem;
   }
 
   // .form__content
@@ -125,6 +141,43 @@
   &__link {
     text-transform: none;
   }
+  &__file {
+    margin-top: 3.2rem;
+    width: fit-content;
+    cursor: pointer;
+    &.btn--transparent {
+      font-size: 2rem;
+      padding: 1.2rem 2.2rem;
+      align-items: baseline;
+      &:hover {
+        & .file__size {
+          color: $white;
+        }
+        & svg path {
+          stroke: $white;
+        }
+      }
+    }
+    & .form__button-svg-box {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    & .icon-close {
+      cursor: pointer;
+      & svg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+.file__size {
+  font-family:'Inter';
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: normal;
+  color: $black;
 }
 
 .catalog-form {
@@ -176,6 +229,7 @@
     // .form__input
 
     &__input {
+      width: 100%;
       padding-bottom: 3.2rem;
       height: 7.2rem;
 
@@ -185,6 +239,21 @@
       }
       &:nth-child(3) {
         grid-row: 2/3;
+      }
+      &+span {
+        font-size: 2.8rem;
+        margin-top: 0.8rem;
+      }
+      &-group {
+        & .catalog__filter {
+          display: flex;
+          align-items: center;
+          padding-left: 5rem;
+          & input {
+            width: 0;
+            border: 0;
+          }
+        }
       }
     }
 
@@ -246,13 +315,34 @@ gap: 11.2rem;
     &__bottom {
       flex-direction: column;
       align-items:flex-start;
-      margin-top: 4.8rem;
+      margin-top: 2rem;
       gap: 2.4rem;
     }
   
     &__subtitle {
       width: 100%;
       font-size: 2.4rem;
+    }
+    &__file {
+      &.btn--transparent {
+        font-size: 3.2rem;
+        padding: 1.6rem 3.4rem;
+      }
+      & .icon-close {
+          display: flex;
+          width: 4.8rem;
+          height: 4.8rem;
+          align-items: center;
+          justify-content: center;
+          & svg {
+            width: 2rem;
+            height: 2rem;
+          }
+      }
+      & .form__button-svg-box {
+        width: 4.8rem;
+        height: 4.8rem;
+      }
     }
   }
 
@@ -268,5 +358,8 @@ gap: 11.2rem;
     .form__inner {
       flex-direction: column-reverse;
     }
+  }
+  .file__size {
+    font-size: 2.4rem;
   }
 }

@@ -29,8 +29,8 @@
                   <div class="product__summary-item">
                     <div class="product__summary-item-title text">Цвет</div>
                     <div class="product__summary-item-list">
-                      <div class="product__summary-color"></div>
-                      <div class="product__summary-color blue active"></div>
+                      <input class="product__summary-color" type="radio" name="color">
+                      <input class="product__summary-color blue active" type="radio" name="color" checked>
                       <div class="product__summary-color-btn btn-more text">
                         Еще
                         <div class="btn-more-arr">
@@ -38,28 +38,30 @@
                         </div>
                       </div>
                       <div class="product__summary-color-list">
-                        <div class="product__summary-color" style="background-color: blueviolet;"></div>
-                        <div class="product__summary-color" style="background-color: green;"></div>
-                        <div class="product__summary-color" style="background-color: brown;"></div>
-                        <div class="product__summary-color" style="background-color: burlywood;"></div>
-                        <div class="product__summary-color" style="background-color: mediumturquoise;"></div>
-                        <div class="product__summary-color" style="background-color: gold;"></div>
+                        <input class="product__summary-color" style="background-color: blueviolet;" type="radio" name="color">
+                        <input class="product__summary-color" style="background-color: green;" type="radio" name="color">
+                        <input class="product__summary-color" style="background-color: brown;" type="radio" name="color">
+                        <input class="product__summary-color" style="background-color: burlywood;" type="radio" name="color">
+                        <input class="product__summary-color" style="background-color: mediumturquoise;" type="radio" name="color">
+                        <input class="product__summary-color" style="background-color: gold;" type="radio" name="color">
                       </div>
                     </div>
                   </div>
                   <div class="product__summary-item">
                     <div class="product__summary-item-title text">Фасовка</div>
                     <div class="product__summary-item-list">
-                      <div class="product__summary-size btn--transparent active">7кг
+                      <label class="product__summary-size btn--transparent active">7кг
+                        <input type="radio" name="size" checked>
                         <div class="product__clear icon-close">
                           <img src="./assets/images/icons/cross-small.svg" alt="">
                         </div>
-                      </div>
-                      <div class="product__summary-size btn--transparent ">15кг
+                      </label>
+                      <label class="product__summary-size btn--transparent ">15кг
+                        <input type="radio" name="size">
                         <div class="product__clear icon-close">
                           <img src="./assets/images/icons/cross-small.svg" alt="">
                         </div>
-                      </div>
+                      </label>
                     </div>
                   </div>
                 </div>
@@ -157,76 +159,184 @@
                 </div>
   
                 <div class="product__tab-content active" data-tab="2">
-                  <div class="product__tab-title title-s">Свойства и характеристики</div>
-                  <div class="product__tab-text text-sm">
-                    <p>
-                      Герметизирующий материал затвердевает за счет испарения влаги, при этом сохраняет свою эластичность. 
-                      Полное время полимеризации – до 7 суток. Температурный режим для использования – от -10 до +35°C. 
-                      Паста сохраняет эксплуатационные свойства при t° от -40 до +70-80°C.
-                    </p>
-                    <p>
-                      Серый однокомпонентный герметик Рустил отличается высокой прочностью. Он надежно сцепляется с бетоном,
-                       кирпичом, деревом, камнем. На высохшую поверхность можно наносить лакокрасочные водно-дисперсионные материалы.
-                    </p>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Производитель</div>
+                    <div class="product__tab-item-text text-sm">Рустил</div>
                   </div>
-                  <div class="product__tab-title title-s">Область применения</div>
-                  <div class="product__tab-text text-sm">
-                    Материал используют для заполнения межпанельных швов, стыков, заделывания трещин в стенах, 
-                    дверных и оконных проемах. Состав также подойдет для монтажа металлопластиковых конструкций. 
-                    Чтобы заказать акриловый морозостойкий герметик Рустил Акрил в Москве, позвоните по телефону 
-                    +7 (495) 120-23-29 или оформите заявку прямо на сайте, и мы сами свяжемся с вами для уточнения 
-                    деталей оплаты и доставки продукции.
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Тип продукции</div>
+                    <div class="product__tab-item-text text-sm">герметик</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Основа</div>
+                    <div class="product__tab-item-text text-sm">акриловая</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Состав</div>
+                    <div class="product__tab-item-text text-sm">однокомпонентный</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Внешний вид</div>
+                    <div class="product__tab-item-text text-sm">однородная глянцевая паста</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Тип применения</div>
+                    <div class="product__tab-item-text text-sm">для наружных работ, для внутренних работ</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Материал назначения</div>
+                    <div class="product__tab-item-text text-sm">бетон, камень, кирпич, дерево, пластик, стекло</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Объекты применения</div>
+                    <div class="product__tab-item-text text-sm">для швов, для межпанельных швов, для швов в бетоне</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Тип тары</div>
+                    <div class="product__tab-item-text text-sm">пластиковое ведро</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Вес</div>
+                    <div class="product__tab-item-text text-sm">15 кг</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Температура применения</div>
+                    <div class="product__tab-item-text text-sm">от -10°С до +40°С</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Температура эксплуатации</div>
+                    <div class="product__tab-item-text text-sm">от -40°С до +80°С</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Морозостойкость</div>
+                    <div class="product__tab-item-text text-sm">да</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Цвет</div>
+                    <div class="product__tab-item-text text-sm">белый</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Плотность</div>
+                    <div class="product__tab-item-text text-sm">1500 кг/м³</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Механизм отверждения</div>
+                    <div class="product__tab-item-text text-sm">высыхающий на воздухе</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Время высыхания</div>
+                    <div class="product__tab-item-text text-sm">
+                      24 – 48 часов (при t +20° С и влажности 60%). С понижением t и увеличением 
+                      влажности время высыхания увеличивается до 7 дней.
+                    </div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Расход герметика</div>
+                    <div class="product__tab-item-text text-sm">200±300 г на п/м шва</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Прогнозируемый срок службы</div>
+                    <div class="product__tab-item-text text-sm">10 лет условной эксплуатации</div>
+                  </div>
+                  <div class="product__tab-item">
+                    <div class="product__tab-item-title text">Срок годности</div>
+                    <div class="product__tab-item-text text-sm">12 месяцев</div>
                   </div>
                 </div>
   
                 <div class="product__tab-content" data-tab="3">
-                  <div class="product__tab-title title-s">Область применения</div>
+                  <div class="product__tab-title title-s">Почему профессиональные строители выбирают наши герметики</div>
                   <div class="product__tab-text text-sm">
-                    Материал используют для заполнения межпанельных швов, стыков, заделывания трещин в стенах, 
-                    дверных и оконных проемах. Состав также подойдет для монтажа металлопластиковых конструкций. 
-                    Чтобы заказать акриловый морозостойкий герметик Рустил Акрил в Москве, позвоните по телефону 
-                    +7 (495) 120-23-29 или оформите заявку прямо на сайте, и мы сами свяжемся с вами для уточнения 
-                    деталей оплаты и доставки продукции.
+                    Сейчас на строительном рынке представлен широкий ассортимент герметизирующих материалов. Когда возникает 
+                    необходимость купить лучший герметик для наружных работ, покупатель часто теряется в свойствах, 
+                    характеристиках и т.п. Поэтому скажем главное о преимуществах герметика Рустил Акрил, а вам выбирать, 
+                    какой герметик лучше всего подойдет для наружных работ.
                   </div>
+                  <div class="product__tab-title title-s">Герметики с историей</div>
+                  <div class="product__tab-text text-sm">
+                    Герметизирующие материалы Рустил производятся с 2008 года. Это герметики высокого качества, что позволяет 
+                    им соответствовать требованиям строителей по долговечности и надежности заделки швов.
+                  </div>
+                  <div class="product__tab-title title-s">Признание качества</div>
+                  <div class="product__tab-text text-sm">
+                    С 2012 года строительные герметики для наружных работ применяются на стройках крупнейших застройщиков 
+                    Москвы ДСК 1, ПИК Индустрия, ФСК Лидер, МОРТОН
+                  </div>
+                  <div class="product__tab-title title-s">Длительный срок эксплуатации</div>
+                  <div class="product__tab-text text-sm">
+                    По заключению ГУП НИИ Мосстрой двухкомпонентная полиуретановая герметизирующая мастика Рустил может 
+                    быть использована для герметизации межпанельных швов, стыков конструкций зданий с максимально 
+                    допустимой деформацией 30%. При этом расчетный срок службы составит 17-20 лет.
+                  </div>
+                  <div class="product__tab-title title-s">Всесезонное применение</div>
+                  <ul class="product__tab-list">
+                    <li>
+                      <span class="text-sm">
+                        Широкий температурный диапазон нанесения (от -20ºС до +40ºС), разрешает всесезонное использование 
+                        и эксплуатацию от -40ºС до +70ºС.
+                      </span>
+                    </li>
+                    <li class="text-sm">
+                      <span class="text-sm">Надежная адгезия к таким строительным материалам, как бетон, кирпич, металл, пластик.</span>
+                    </li>
+                    <li class="text-sm">
+                      <span class="text-sm">
+                        Морозостойкие и водостойкие герметики для наружных работ Рустил Акрил пригодны к эксплуатации от 
+                        -40ºС до +70ºС, устойчивы к воздействию климатических факторов и ультрафиолета.
+                      </span>
+                    </li>
+                    <li class="text-sm">
+                      <span class="text-sm">Окрашиваются любыми водно-дисперсионными фасадными красками.</span>
+                    </li>
+                    <li class="text-sm">
+                      <span class="text-sm">Сохраняют эластичность при больших перепадах температур.</span>
+                    </li>
+                    <li class="text-sm">
+                      <span class="text-sm">Практически не дают усадки.</span>
+                    </li>
+                  </ul>
+                  <div class="product__tab-title title-s">Выбор цвета</div>
+                  <div class="product__tab-text text-sm">
+                    Широкий выбор цветовых решений: от базовых цветов до изготовления любого цвета на заказ.
+                  </div>
+                  <div class="product__tab-title title-s">Ценовое преимущество</div>
+                  <ul class="product__tab-list">
+                    <li class="text-sm">
+                      <span class="text-sm">
+                        Прямые поставки от производителя. Это позволяет нам устанавливать выгодные условия покупки для каждого клиента.
+                      </span>
+                    </li>
+                    <li class="text-sm">
+                      <span class="text-sm">Гибкая система скидок на герметики в Москве.</span>
+                    </li>
+                  </ul>
                 </div>
   
                 <div class="product__tab-content" data-tab="4">
-                  <div class="product__tab-title title-s">Свойства и характеристики</div>
-                  <div class="product__tab-text text-sm">
-                    <p>
-                      Герметизирующий материал затвердевает за счет испарения влаги, при этом сохраняет свою эластичность. 
-                      Полное время полимеризации – до 7 суток. Температурный режим для использования – от -10 до +35°C. 
-                      Паста сохраняет эксплуатационные свойства при t° от -40 до +70-80°C.
-                    </p>
-                    <p>
-                      Серый однокомпонентный герметик Рустил отличается высокой прочностью. Он надежно сцепляется с бетоном,
-                       кирпичом, деревом, камнем. На высохшую поверхность можно наносить лакокрасочные водно-дисперсионные материалы.
-                    </p>
+                  <div class="product__tab-link">
+                    <div class="product__tab-link-img">
+                      <img src="./assets/images/icons/download.svg" alt="">
+                    </div>
+                    <a class="btn-link" href="#0">Инструкция по нанесению</a>
                   </div>
-                  <div class="product__tab-title title-s">Преимущества</div>
-                  <ul class="product__tab-list">
-                    <li class="text-sm">
-                      высокая адгезия
-                    </li>
-                    <li class="text-sm">
-                      морозостойкость, атмосферостойкость;
-                    </li>
-                    <li class="text-sm">
-                      устойчивость к неблагоприятным погодным условиям, ультрафиолету, перепадам температур;
-                    </li>
-                    <li class="text-sm">
-                      экологическая безопасность;
-                    </li>
-                    <li class="text-sm">
-                      экономичный расход;
-                    </li>
-                    <li class="text-sm">
-                      полностью готова к применению (не требует предварительного смешивания компонентов);
-                    </li>
-                    <li class="text-sm">
-                      доступная стоимость.
-                    </li>
-                  </ul>
+                  <div class="product__tab-link">
+                    <div class="product__tab-link-img">
+                      <img src="./assets/images/icons/download.svg" alt="">
+                    </div>
+                    <a class="btn-link" href="#0">Технический лист</a>
+                  </div>
+                  <div class="product__tab-link">
+                    <div class="product__tab-link-img">
+                      <img src="./assets/images/icons/download.svg" alt="">
+                    </div>
+                    <a class="btn-link" href="#0">Нормы расхода</a>
+                  </div>
+                  <div class="product__tab-link">
+                    <div class="product__tab-link-img">
+                      <img src="./assets/images/icons/download.svg" alt="">
+                    </div>
+                    <a class="btn-link" href="#0">Сертификат соответствия</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -244,6 +354,7 @@
         </div>
       </section>
       <include src="./components/popular_goods.html"></include>
+      
       <include src="./components/modal-bill.html"></include>
       <include src="./components/modal-success.html"></include>
     </main>
