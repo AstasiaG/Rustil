@@ -24,6 +24,7 @@ const entryPoints = {
   "prices-poliuretanovie": path.resolve(__dirname, "src", "index.js"),
   catalog: path.resolve(__dirname, "src", "index.js"),
   "catalog-category": path.resolve(__dirname, "src", "index.js"),
+  prices: path.resolve(__dirname, "src", "index.js"),
   '404': path.resolve(__dirname, "src", "index.js"),
 };
 

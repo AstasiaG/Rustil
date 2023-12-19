@@ -232,7 +232,8 @@
         }
       }
     }
-    &__sort {
+    &__sort,
+    .catalog-category__sort {
       width: 100%;
       gap: 1.6rem;
       margin-bottom: 8rem;

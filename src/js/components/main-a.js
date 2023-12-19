@@ -134,7 +134,8 @@ function modalFiltersCalc() {
 //catalog//
 
 $(function () {
-  $('.catalog__sort').hide()
+  $('.catalog__sort').hide();
+    
   if ($('.catalog__categories .payment__item').hasClass('active')) {
     const data = $('.catalog__categories .payment__item').attr('data-tab');
     $(`.catalog__sort[data-tab="${data}"]`).show();
@@ -167,7 +168,6 @@ function calculateSort() {
         labels.slice(labelsToShow).hide();
 
         showMoreBtn.on('click', function () {
-          console.log('fffff',$(this).text(), $(this).text() === 'Показать ещё')
           if ($(this).text() === 'Показать ещё') {
             labels.show();
             $(this).text('Скрыть');
@@ -190,6 +190,8 @@ function calculateLabelsToShow(container) {
   const labelsPerRow = Math.floor(containerWidth / labelWidth);
   return labelsPerRow;
 }
+
+calculateSort();
 
 $('.catalog__list-filter').on('click', function () {
   $('.catalog__list-filter').removeClass('active');
@@ -241,6 +243,40 @@ $(function () {
     } else {
       $(this).removeClass('active');
     }
+  })
+
+  if ($('.catalog-category .catalog__sort')) {
+    if ($(window).width() > 768) {
+      $('.catalog-category .catalog__sort').find('.btn--red').show();
+      const labels = $('.catalog-category .catalog__sort').find('.catalog__sort-btn');
+      const showMoreBtn = $('.catalog-category .catalog__sort').find('.btn--red');
+      // const c = $(this);
+      // const labelsToShow = calculateLabelsToShow(c);
+    console.log(labels.length <= 5)
+      if (labels.length <= 5) {
+        showMoreBtn.hide();
+      }
+      labels.slice(5).hide();
+
+      showMoreBtn.on('click', function () {
+        if ($(this).text() === 'Показать ещё') {
+          labels.show();
+          $(this).text('Скрыть');
+        } else if($(this).text() === 'Скрыть'){
+          labels.slice(5).hide();
+          $(this).text('Показать ещё');
+        }
+      })
+    }
+    if ($(window).width() < 769) {
+      $('.catalog-category .catalog__sort').find('.btn--red').hide();
+    }
+  }
+  $('.catalog-category .catalog__sort').show();
+  $('.catalog-category .catalog__sort-btn').on('click', function (e) {
+    e.preventDefault();
+    $('.catalog__sort-btn').removeClass('active')
+    $(this).addClass('active');
   })
 
   $('.catalog__filters-active').on('click', '.catalog__filter-active', function () {

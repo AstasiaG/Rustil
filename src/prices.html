@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body>
+  <include src="./components/header.html"></include>
+  <main>
+    <section class="prices-page">
+      <div class="container">
+        <div class="prices-page__title title">Прайс-листы на наши товары</div>
+        <div class="prices-page__content price">
+          <div class="prices-page__prices">
+            <a class="prices-page__prices-link" href="#0">
+              <span>ДВУХКОМПОНЕНТНЫЕ ПОЛИУРЕТАНОВЫЕ ГЕРМЕТИКИ</span>
+              <div class="btn--circle">
+                <img
+                  src="./assets/images/icons/arr_right_white.svg"
+                  alt="стрелка вправо"
+                />
+              </div>
+            </a>
+            <a class="prices-page__prices-link" href="#0">
+              <span>ПОЛИУРЕТАНОВЫЕ ГЕРМЕТИКИ 600 МЛ</span>
+              <div class="btn--circle">
+                <img
+                  src="./assets/images/icons/arr_right_white.svg"
+                  alt="стрелка вправо"
+                />
+              </div>
+            </a>
+            <a class="prices-page__prices-link" href="#0">
+              <span>ПОЛИУРЕТАНОВЫЕ ГЕРМЕТИКИ RAL</span>
+              <div class="btn--circle">
+                <img
+                  src="./assets/images/icons/arr_right_white.svg"
+                  alt="стрелка вправо"
+                />
+              </div>
+            </a>
+            <a class="prices-page__prices-link" href="#0">
+              <span>КЛЕЙ-ГЕРМЕТИКИ</span>
+              <div class="btn--circle">
+                <img
+                  src="./assets/images/icons/arr_right_white.svg"
+                  alt="стрелка вправо"
+                />
+              </div>
+            </a>
+            <a class="prices-page__prices-link btn" href="#0">
+              <span>АКРИЛОВЫЕ ГЕРМЕТИКИ</span>
+              <div class="btn--circle">
+                <img
+                  src="./assets/images/icons/arr_right_white.svg"
+                  alt="стрелка вправо"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="prices-page__aside">
+            <div class="product__info">
+              <div class="product__info-title title-s">Информация для оптовых клиентов</div>
+              <p class="product__info-text text-sm">Оптовая цена действует при заказе от 50 000 руб.</p>
+              <p class="product__info-text text-sm">
+                Для получения индивидуальных скидок, отправьте пожалуйста ваш заказ на почту или 
+                через форму “Получить счет/КП” или напишите в Whatsapp.
+              </p>
+              <div class="product__info-contacts">
+                <a class="product__info-link text" href="mailto:info@germetic-rus.ru">info@germetic-rus.ru</a>
+                <a class="product__info-btn btn--transparent" href="tel:8 (495) 120-23-29">8 (495) 120-23-29</a>
+                <div class="product__info-icon button--circle">
+                  <div class="form__content-link-tel-svg-box">
+                    <img src="./assets/images/icons/call-calling.svg" alt="Телефон" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="prices-page__aside-btns">
+              <button class="product__cost-btn button button__arr" type="button">
+                В каталог
+                <div class="popular-categories__button-svg-box button__arr-svg-box">
+                  <img src="./assets/images/icons/arr_right_white.svg" alt="стрелка вправо">
+                </div>
+              </button>
+              <button class="product__cost-btn button button__arr" type="button" id="modal-bill">
+                Получить счёт/КП
+                <div class="popular-categories__button-svg-box button__arr-svg-box">
+                  <img src="./assets/images/icons/arr_right_white.svg" alt="стрелка вправо">
+                </div>
+              </button>
+            </div>
+            <div class="prices-page__aside-links">
+              <a class="btn-link" href="#0">Способы оплаты</a>
+              <a class="btn-link" href="#0">Условия доставки</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <include src="./components/popular_goods.html"></include>
+  </main>
+  <include src="./components/modal-bill.html"></include>
+  <include src="./components/modal-success.html"></include>
+  <include src="./components/footer.html"></include>
+</body>
+</html>

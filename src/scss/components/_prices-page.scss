@@ -44,6 +44,48 @@
       border-bottom: 0.1rem solid $black;
     }
   }
+  &__prices {
+    width: 77rem;
+    &-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0 0 2.4rem;
+      border-bottom: 0.1rem solid $grey;
+      margin-bottom: 2.4rem;
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom: 0;
+      }
+      & .btn--circle {
+        opacity: 0;
+        transition: opacity 0.2s;
+        background: $black;
+        & img {
+          width: 2rem;
+          height: 1.5rem;
+        }
+      }
+      & span {
+        width: 69rem;
+        font-family: 'Inter';
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.48px;
+        color: $black;
+      }
+      &:hover {
+        & span {
+          color: $red;
+        }
+        & .btn--circle {
+          opacity: 1;
+        }
+      }
+    }
+  }
   &__aside {
     position: sticky;
     top: 5rem;
@@ -90,6 +132,10 @@
     margin-bottom: 20rem;
     &__content {
       flex-direction: column-reverse;
+      gap: 20rem;
+      &.price {
+        flex-direction: column;
+      }
     }
     &__table {
       width: 100%;
@@ -123,6 +169,33 @@
         border-bottom: 0.2rem solid $black;
       }
     }
+    &__prices {
+      width: 100%;
+      &-link {
+        padding: 0 0 4.8rem;
+        border-bottom: 0.2rem solid $grey;
+        margin-bottom: 4.8rem;
+        & span {
+          width: 51rem;
+          font-size: 4rem;
+        }
+        & .btn--circle {
+          width: 11.2rem;
+          height: 11.2rem;
+          opacity: 1;
+          transition: opacity 0.2s;
+          & img {
+            width: 4rem;
+            height: 3rem;
+          }
+        }
+        &:hover {
+          & span {
+            color: $red;
+          }
+        }
+      }
+    }
     &__aside {
       width: 100%;
       position: static;
@@ -143,7 +216,6 @@
       &-links {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 20rem;
       }
     }
   }
