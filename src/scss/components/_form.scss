@@ -73,6 +73,7 @@
 
   &__btn {
     margin-top: -1.5rem;
+    height: fit-content;
   }
 
   // .form__content
@@ -188,6 +189,7 @@
   .form__btn {
     padding: 1.9rem 4rem;
     margin-top: -2rem;
+    height: fit-content;
   }
   .form__content {
     background: url(./assets/images/modal-success.webp) no-repeat top/cover;

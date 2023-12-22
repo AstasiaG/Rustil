@@ -49,7 +49,6 @@ const mapDelivery = () => {
 
     map.geoObjects.add(placemark)
     
-// placemark.balloon.open()
       }
       ymaps.ready(init);
 

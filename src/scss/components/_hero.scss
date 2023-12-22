@@ -18,11 +18,12 @@
   // .hero__content
 
   &__content {
-    width: 59rem;
+    width: 79rem;
     display: flex;
     flex-direction: column;
     position: relative;
     gap: 3.2rem;
+    margin-right: 0.6rem;
   }
 
   // .hero__title
@@ -109,6 +110,9 @@
         }
       }
     }
+    & .swiper-slide {
+      display: flex;
+    }
   }
 
   // .hero__swiper-wrapper
@@ -134,8 +138,10 @@
 
   &__swiper-button-box {
     position: relative;
+    top: -8.5rem;
     display: flex;
     align-items: center;
+    width: fit-content;
     gap: 0.8rem;
     & .hero__swiper-button-prev,
     & .hero__swiper-button-next {

@@ -58,22 +58,33 @@ const form = () => {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        console.log(name.value,phone.value,mail.value)
 
-        if (name.value == "" && phone.value == "") {
-            phone.classList.add("invalid");
-            name.classList.add("invalid");
-            phoneError.textContent = "Заполните поле";
-            phoneError.className = "error active";
-            nameError.textContent = "Заполните поле";
-            nameError.className = "error active";
-            return;
-        } else if (name.value == "" && mail.value == "") { 
-            mail.classList.add("invalid");
-            name.classList.add("invalid");
-            mailError.textContent = "Заполните поле";
-            mailError.className = "error active";
-            nameError.textContent = "Заполните поле";
-            nameError.className = "error active";
+        if (name.value == "" && phone.value == "" && mail.value == "" || mail.value == "" || phone.value == "" || name.value == "") {
+            if (name.value == "") {
+                name.classList.add("invalid");
+                nameError.textContent = "Заполните поле";
+                nameError.className = "error active";
+            }
+            if (phone.value == "") {
+                phone.classList.add("invalid");
+                phoneError.textContent = "Заполните поле";
+                phoneError.className = "error active";
+            }
+            if (mail.value == "") {
+                mail.classList.add("invalid");
+                mailError.textContent = "Заполните поле";
+                mailError.className = "error active";
+            }
+            // name.classList.add("invalid");
+            // nameError.textContent = "Заполните поле";
+            // nameError.className = "error active";
+            // phone.classList.add("invalid");
+            // phoneError.textContent = "Заполните поле";
+            // phoneError.className = "error active";
+            // mail.classList.add("invalid");
+            // mailError.textContent = "Заполните поле";
+            // mailError.className = "error active";
             return;
         } else {
             $.ajax();
@@ -85,15 +96,8 @@ const form = () => {
             }
             $(".modal.success-application").addClass("active");
             openModal();
-          }
+        }
 
-        // if (validateName(name)) {
-        //     // form.submit();
-        //     $.ajax();
-        //     if (form.closest('.modal')) {
-        //         form.closest('.modal').classList.remove("active");
-        //     }
-        // }
     });
 
 
